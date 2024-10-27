@@ -1,6 +1,6 @@
 FROM osrf/ros:noetic-desktop-full
 RUN apt update && apt clean
-RUN apt install -y ros-noetic-hector-slam ros-noetic-husky-gazebo ros-noetic-husky-desktop && apt clean
+RUN apt install -y ros-noetic-hector-slam ros-noetic-husky-gazebo ros-noetic-husky-desktop ros-noetic-plotjuggler-ros && apt clean
 RUN apt install -qqy x11-apps && apt clean
 
 RUN export uid=1000 gid=1000
