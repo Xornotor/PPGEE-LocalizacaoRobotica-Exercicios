@@ -42,7 +42,7 @@ set -a
 
 # Velodyne LiDAR Primary and Secondary
 HUSKY_LASER_3D_ENABLED=1  # default: 0
-# HUSKY_LASER_3D_TOPIC=    # default: points
+HUSKY_LASER_3D_TOPIC=velodyne_points    # default: points
 # HUSKY_LASER_3D_TOWER=    # default: 1
 # HUSKY_LASER_3D_PREFIX=   # default: 
 # HUSKY_LASER_3D_PARENT=   # default: top_plate_link
@@ -101,7 +101,7 @@ HUSKY_LASER_3D_ENABLED=1  # default: 0
 
 # Extras
 # ROBOT_NAMESPACE=     # /
-HUSKY_URDF_EXTRAS=$(rospack find lar_gazebo)'/husky_urdf_extras/gazebo_ground_truth.urdf'   # empty.urdf
+# HUSKY_URDF_EXTRAS=$(rospack find lar_gazebo)'/husky_urdf_extras/gazebo_ground_truth.urdf'   # empty.urdf
 # CPR_URDF_EXTRAS=     # empty.urdf
 
 set +a

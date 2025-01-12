@@ -1,7 +1,7 @@
 #!/bin/bash
 
 export SVGA_VGPU10=0
-source /ros_entrypoint.sh
+source ./ros_entrypoint.sh
 
 if [ -d "Atividade_02/build" ]; then
     rm -rf Atividade_02/build
