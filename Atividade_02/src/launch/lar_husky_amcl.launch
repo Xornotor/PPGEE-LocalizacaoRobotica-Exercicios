@@ -2,7 +2,7 @@
 
 <launch>
   <!-- gazebo args -->
-  <arg name="world_name" default="$(find lar_gazebo)/worlds/lar.world"/>
+  <arg name="world_name" default="$(find lar_odom_diff)/worlds/lar.world"/>
   <arg name="paused" default="true" doc="Starts gazebo in paused mode" />
   <arg name="gui" default="true" doc="Starts gazebo gui" />
 
@@ -16,7 +16,7 @@
   <arg name="yaw" default="0.0"/>
 
   <!-- Include world launch -->
-  <include file="$(find lar_gazebo)/launch/lar_world.launch">
+  <include file="$(find lar_odom_diff)/launch/lar_world.launch">
     <arg name="world_name" value="$(arg world_name)"/>
     <arg name="gui" value="$(arg gui)"/>
     <arg name="paused" value="$(arg paused)"/>
@@ -51,10 +51,13 @@
   <!-- Rosbag recording -->
 
   <node pkg="rosbag" type="record" name="rosbag_record_cam"
-       args="record -o $(find lar_gazebo)/bags/odom_comp /husky_velocity_controller/odom
-       /amcl_pose /odometry/filtered"/>
+       args="record -o $(find lar_odom_diff)/bags/odom_comp /husky_velocity_controller/odom
+       /amcl_pose /odometry/filtered /odom_diff/wheel /odom_diff/fusion"/>
 
   <!-- RViz -->
-  <node type="rviz" name="rviz" pkg="rviz" args="-d $(find lar_gazebo)/config/lar_husky.rviz"/>
+  <node type="rviz" name="rviz" pkg="rviz" args="-d $(find lar_odom_diff)/config/lar_husky.rviz"/>
+
+  <!-- Odom Diff Calculator -->
+  <node pkg="lar_odom_diff" type="odom_diff.py" name="odom_diff"/> 
 
 </launch>

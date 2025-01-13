@@ -19,4 +19,4 @@ source Atividade_02/src/husky_accessories.sh
 rosdep update
 rosdep install --from-paths Atividade_02/src --ignore-src -r -y --rosdistro noetic
 
-roslaunch lar_gazebo lar_husky_amcl.launch
+roslaunch lar_odom_diff lar_husky_amcl.launch

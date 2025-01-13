@@ -101,7 +101,7 @@ HUSKY_LASER_3D_TOPIC=velodyne_points    # default: points
 
 # Extras
 # ROBOT_NAMESPACE=     # /
-HUSKY_URDF_EXTRAS=$(rospack find lar_gazebo)'/husky_urdf_extras/gazebo_ground_truth.urdf'   # empty.urdf
+HUSKY_URDF_EXTRAS=$(rospack find lar_odom_diff)'/husky_urdf_extras/gazebo_ground_truth.urdf'   # empty.urdf
 # CPR_URDF_EXTRAS=     # empty.urdf
 
 set +a

@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.0.2)
-project(lar_gazebo)
+project(lar_odom_diff)
 
 find_package(catkin REQUIRED COMPONENTS)
 
@@ -10,6 +10,9 @@ install(
   DIRECTORY launch maps models worlds
   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
 )
+
+catkin_install_python(PROGRAMS scripts/odom_diff.py
+                      DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
 
 if (CATKIN_ENABLE_TESTING)
   find_package(roslaunch REQUIRED)

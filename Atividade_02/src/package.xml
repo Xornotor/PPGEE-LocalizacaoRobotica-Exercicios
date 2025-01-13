@@ -1,15 +1,14 @@
 <?xml version="1.0"?>
 <package format="2">
-  <name>lar_gazebo</name>
-  <version>1.1.0</version>
-  <description>The lar_gazebo package</description>
+  <name>lar_odom_diff</name>
+  <version>1.0.0</version>
+  <description>The lar_odom_diff package</description>
 
-  <maintainer email="ericksuzart@gmail.com">Erick Suzart Souza</maintainer>
-  <maintainer email="mateusmenezes95@gmail.com">Mateus Menezes</maintainer>
+  <maintainer email="andre.paiva@ufba.br">André Paiva Conrado Rodrigues</maintainer>
 
-  <license>BSD</license>
-  <url type="website">https://github.com/ericksuzart/lar_gazebo</url>
-  <author email="ericksuzart@gmail.com">Erick Suzart Souza</author>
+  <license>MIT</license>
+  <url type="website">https://github.com/ericksuzart/lar_odom_diff</url>
+  <author email="andre.paiva@ufba.br">André Paiva Conrado Rodrigues</author>
 
   <buildtool_depend>catkin</buildtool_depend>
 
@@ -21,6 +20,7 @@
   <exec_depend>hector_mapping</exec_depend>
   <exec_depend>hector_slam</exec_depend>
   <exec_depend>husky_gazebo</exec_depend>
+  <exec_depend>husky_navigation</exec_depend>
   <exec_depend>rviz</exec_depend>
 
   <test_depend>roslaunch</test_depend>
